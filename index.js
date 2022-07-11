@@ -13,7 +13,7 @@ app.get("/", cors() ,async (req, res) => {
 });       
 
 
-app.post("/", cors(), async (req, res) => {
+app.post("/" , async (req, res) => {
     const query = req.body.city;
     const apiKey = process.env.API_KEY;
     const unit = "metric";
