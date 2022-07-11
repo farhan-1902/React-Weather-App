@@ -6,21 +6,17 @@ import Header from "./Header";
 function App() {
   const [city, setCity] = React.useState("");
   const [weather, setWeather] = React.useState([]);
-  
+
   async function postCity(e) {
     e.preventDefault();
 
-    try {
       await axios.post("/", {
         city
       }).then((response) => {
         console.log(response.data);
         setWeather(response.data);
-      })
-    } catch (err) {
-      console.log(err);
+      }).catch((error) => {console.log(error)})
     }
-  }
 
   return (
     <div className="App">
