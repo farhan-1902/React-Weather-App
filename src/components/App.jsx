@@ -6,13 +6,7 @@ import Header from "./Header";
 function App() {
   const [city, setCity] = React.useState("");
   const [weather, setWeather] = React.useState([]);
-  const [currentIP, setCurrentIP] = React.useState("");
-
-  React.useEffect(() => {
-    axios.get('https://api.ipify.org/?format=json')
-         .then(response => setCurrentIP(response.data.ip))
-  }, [])
-
+  
   async function postCity(e) {
     e.preventDefault();
 
