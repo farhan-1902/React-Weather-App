@@ -11,7 +11,7 @@ function App() {
     e.preventDefault();
 
       await axios.post("/", {
-        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        headers: { 'content-type': 'text/plain;charset=utf-8' },
         city
       }).then((response) => {
         console.log(response.data);
